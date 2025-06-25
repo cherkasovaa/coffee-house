@@ -1,0 +1,19 @@
+.gallery-item {
+  @include hover-shrink-photo($figure: square);
+
+  @media screen and (max-width: $tablet-breakpoint) {
+    @include hover-shrink-photo($figure: square, $device: tablet);
+  }
+
+  @media screen and (max-width: $pre-mobile-breakpoint) {
+    @include hover-shrink-photo($figure: square, $device: mobile);
+  }
+
+  &_parallelogram {
+    @include hover-shrink-photo;
+
+    @media screen and (max-width: $tablet-breakpoint) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+$icon-size: 1.25rem;
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+
+  &__item {
+    @include text($color: $color-secondary);
+
+    position: relative;
+    padding-left: 1.75rem; // 0.5gap + icon width 1.25rem
+    letter-spacing: 0.015rem;
+    cursor: default;
+
+    &_clock::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $icon-size;
+      height: $icon-size;
+      content: url('../assets/images/svg/clock.svg');
+    }
+  }
+
+  &__link {
+    @include link($color: $color-secondary, $weight: $regular);
+
+    position: relative;
+    line-height: 125%;
+    letter-spacing: 0.015rem;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -1.75rem;
+      width: $icon-size;
+      height: $icon-size;
+    }
+
+    &_pin-alt::before {
+      content: url('../assets/images/svg/pin-alt.svg');
+    }
+
+    &_phone::before {
+      content: url('../assets/images/svg/phone.svg');
+    }
+  }
+}

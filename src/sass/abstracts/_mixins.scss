@@ -1,0 +1,219 @@
+// Mixin for heading
+@mixin heading(
+  $font-size,
+  $weight: $bold,
+  $line-height: 125%,
+  $color: $color-primary
+) {
+  font-size: $font-size;
+  font-weight: $weight;
+  line-height: $line-height;
+  color: $color;
+}
+
+// Mixin for text
+@mixin text(
+  $font-size: $primary-text-size,
+  $weight: $regular,
+  $color: $color-primary,
+  $letter-spacing: 0.05rem
+) {
+  font-size: $font-size;
+  line-height: 150%;
+  color: $color;
+}
+
+// Mixin for text elements
+@mixin text-element(
+  $font-size: $text-element-size,
+  $color: $color-primary,
+  $weight: $bold
+) {
+  font-size: $font-size;
+  font-weight: $weight;
+  line-height: 150%;
+}
+
+// Mixin for links
+@mixin link(
+  $font-size: $text-element-size,
+  $color: $color-primary,
+  $weight: $bold
+) {
+  @include text-element($font-size, $weight: $weight);
+
+  position: relative;
+  color: $color;
+  text-decoration: none;
+
+  &::after {
+    position: absolute;
+    bottom: -0.25rem;
+    left: 0;
+    width: 100%;
+    height: 0.125rem;
+    content: '';
+    background-color: $color;
+    transform: scale(0);
+    transition: $transition;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      &::after {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+// Mixin for burger links
+@mixin burger-link($font-size: $burger-link-size) {
+  font-size: $font-size;
+  font-weight: $bold;
+  line-height: 125%;
+}
+
+// Mixin for button
+@mixin button(
+  $padding,
+  $bg-color: transparent,
+  $border-width: 1px,
+  $border-radius: 6.25rem,
+  $isflex: true
+) {
+  @if $isflex == true {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+  } @else {
+    display: grid;
+  }
+
+  padding: $padding;
+  color: $color-primary;
+  cursor: pointer;
+  border-radius: $border-radius;
+  transition: $transition;
+
+  @if $bg-color == transparent {
+    background: transparent;
+    border: $border-width solid $border-dark;
+
+    @media (hover: hover) {
+      &:hover {
+        background: $border-dark;
+
+        & * {
+          color: $color-secondary;
+          fill: $color-secondary;
+        }
+      }
+    }
+  } @else {
+    background: $bg-color;
+    border: $border-width solid $bg-color;
+  }
+}
+
+// Mixin of shrink photo effect
+@mixin hover-shrink-photo(
+  $figure: parallelogram,
+  $shrink-scale: 1,
+  $size: 36.9rem,
+  $hover: true,
+  $border-radius: 1.25rem,
+  $device: desktop
+) {
+  $transition-duration: $transition;
+  $border-radius: $border-radius;
+  $initial-scale: 1.1;
+
+  @if $device == tablet {
+    $initial-scale: 1.05;
+  } @else if $device == mobile {
+    $initial-scale: 1.25;
+  }
+
+  overflow: hidden;
+  border-radius: $border-radius;
+
+  @if $figure == parallelogram {
+    height: 26.875rem;
+  } @else {
+    height: $size;
+  }
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale($initial-scale);
+    transition: $transition-duration;
+  }
+
+  @media (hover: hover) {
+    &:hover > img {
+      transform: scale($shrink-scale);
+    }
+  }
+}
+
+// Mixin for circle button
+@mixin circle-button(
+  $border-color: $border-dark,
+  $hover-background: $bg-body,
+  $hover-stroke: $color-primary,
+  $size: 3.75rem
+) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $size;
+  height: $size;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid $border-color;
+  border-radius: 50%;
+  transition: $transition;
+
+  & .icon {
+    stroke: $border-color;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $hover-background;
+      border-color: $border-color;
+
+      & .icon {
+        stroke: $hover-stroke;
+      }
+    }
+  }
+}
+
+@mixin card-info($align-items: start, $gap: 0.75rem, $content: false) {
+  @if $content == true {
+    &__content {
+      display: grid;
+      grid-template-rows: 1fr 2.4fr 1fr;
+      gap: $gap;
+    }
+  } @else {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+    align-items: $align-items;
+  }
+
+  &__title,
+  &__price {
+    @include heading($tertiary-heading-size);
+  }
+
+  &__description {
+    @include text;
+  }
+}

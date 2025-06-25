@@ -1,0 +1,43 @@
+$padding-size: 6.25rem;
+$gap-size: 6.25rem;
+$border-radius: 2.5rem;
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $gap-size;
+  padding: $padding-size;
+  background-color: $bg-container;
+  border-radius: $border-radius;
+
+  @media screen and (max-width: $tablet-breakpoint) {
+    grid-template-rows: auto auto;
+    grid-template-columns: auto;
+    padding: $padding-size 3.75rem 6.55rem;
+  }
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    gap: 2.5rem;
+    padding: 3.9rem 0 4rem 1rem;
+  }
+
+  &__social-media,
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: $pre-mobile-breakpoint) {
+      gap: 2.35rem !important;
+    }
+  }
+
+  &__social-media {
+    gap: 2.5rem;
+    justify-content: space-between;
+  }
+
+  &__contacts {
+    gap: 2.3rem;
+    justify-content: center;
+  }
+}

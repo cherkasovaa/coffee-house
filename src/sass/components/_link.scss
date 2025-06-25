@@ -1,0 +1,19 @@
+.link {
+  @include link;
+
+  display: flex;
+  gap: 0.5rem;
+
+  @media screen and (max-width: $tablet-breakpoint) {
+    gap: 1.25rem;
+    font-size: $burger-link-size;
+  }
+
+  &_active {
+    cursor: default;
+
+    &::after {
+      transform: scale(1);
+    }
+  }
+}

@@ -1,0 +1,5 @@
+.contacts-info {
+  &__title {
+    @include heading($tertiary-heading-size, $color: $color-secondary);
+  }
+}

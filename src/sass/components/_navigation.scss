@@ -1,0 +1,33 @@
+.navigation {
+  display: flex;
+  grid-area: navigation;
+  justify-content: space-between;
+  transform: translateY(-3px);
+
+  @media screen and (max-width: $tablet-breakpoint) {
+    flex-direction: column;
+    gap: 5.75rem;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100vh;
+    padding: 4.85rem 1.75rem;
+    background-color: $bg-body;
+    transform: translateX(200%);
+    transition: $transition;
+  }
+
+  &__list {
+    display: flex;
+    gap: 2.6rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    @media screen and (max-width: $tablet-breakpoint) {
+      flex-direction: column;
+      gap: 3.25rem;
+      transform: translateX(-0.1rem);
+    }
+  }
+}

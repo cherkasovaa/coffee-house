@@ -1,0 +1,8 @@
+$gap: 6.25rem;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+  padding: 1.25rem 0 6.1rem;
+}

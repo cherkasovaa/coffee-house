@@ -1,0 +1,29 @@
+.enjoy {
+  position: relative;
+  z-index: 0;
+  max-width: 85rem;
+  padding: 6.35rem 5.8rem 6.2rem;
+  overflow: hidden;
+  background: url('../assets/images/main_bg.jpg') no-repeat left center/ cover;
+  border-radius: 2.5rem;
+
+  &__bgvideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media screen and (max-width: $tablet-breakpoint) {
+    padding: 6.25rem 3.25rem 6.3rem;
+    background-position-x: center;
+    background-position-y: center;
+  }
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding: 3.75rem 0.5rem;
+  }
+}

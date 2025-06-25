@@ -1,0 +1,10 @@
+$size: 1.25rem;
+
+%icon {
+  width: $size;
+  height: $size;
+}
+
+.icon {
+  @extend %icon;
+}

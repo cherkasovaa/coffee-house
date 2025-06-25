@@ -1,0 +1,10 @@
+.coffee-menu {
+  & .icon {
+    @media screen and (max-width: $tablet-breakpoint) {
+      $size: 2.5rem;
+
+      width: $size;
+      height: $size;
+    }
+  }
+}

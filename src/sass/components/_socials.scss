@@ -1,0 +1,12 @@
+.socials {
+  display: flex;
+  gap: 0.6rem;
+
+  &__item {
+    @include circle-button($border-color: $border-light);
+
+    cursor: pointer;
+    stroke: $color-secondary;
+    transition: $transition;
+  }
+}

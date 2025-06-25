@@ -1,0 +1,21 @@
+.main-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 2.55rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem 0 6.2rem;
+
+  @media screen and (max-width: $tablet-breakpoint) {
+    padding-bottom: 6.1rem;
+  }
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-bottom: 6.2rem;
+  }
+
+  &__title {
+    max-width: 50rem;
+    text-align: center;
+  }
+}

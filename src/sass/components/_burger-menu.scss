@@ -1,0 +1,33 @@
+// $size: 2.6rem;
+
+.burger-menu {
+  display: none;
+  grid-area: burger;
+  justify-self: end;
+
+  @media screen and (max-width: $tablet-breakpoint) {
+    @include circle-button($size: 2.6rem);
+
+    flex-direction: column;
+    gap: 0.5rem;
+    transform: translateY(-1px);
+  }
+
+  &__item {
+    width: 1rem;
+    height: 0.1rem;
+    background-color: $color-primary;
+    border-radius: 6.25rem;
+    transition: $transition;
+  }
+
+  &_active {
+    & > .burger-menu__item:first-child {
+      transform: rotate(45deg) translate(4px, 4px);
+    }
+
+    & > .burger-menu__item:last-child {
+      transform: rotate(-45deg) translate(3px, -3px);
+    }
+  }
+}
