@@ -1,0 +1,51 @@
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../assets/fonts/Inter/Inter-Regular.eot');
+  src:
+    url('../../assets/fonts/Inter/Inter-Regular.eot?#iefix')
+      format('embedded-opentype'),
+    url('../../assets/fonts/Inter/Inter-Regular.woff') format('woff'),
+    url('../../assets/fonts/Inter/Inter-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: italic;
+  font-weight: normal;
+  src: url('../../assets/fonts/Inter/Inter-Italic.eot');
+  src:
+    url('../../assets/fonts/Inter/Inter-Italic.eot?#iefix')
+      format('embedded-opentype'),
+    url('../../assets/fonts/Inter/Inter-Italic.woff') format('woff'),
+    url('../../assets/fonts/Inter/Inter-Italic.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  src: url('../../assets/fonts/Inter/Inter-SemiBold.eot');
+  src:
+    url('../../assets/fonts/Inter/Inter-SemiBold.eot?#iefix')
+      format('embedded-opentype'),
+    url('../../assets/fonts/Inter/Inter-SemiBold.woff') format('woff'),
+    url('../../assets/fonts/Inter/Inter-SemiBold.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 600;
+  src: url('../../assets/fonts/Inter/Inter-SemiBoldItalic.eot');
+  src:
+    url('../../assets/fonts/Inter/Inter-SemiBoldItalic.eot?#iefix')
+      format('embedded-opentype'),
+    url('../../assets/fonts/Inter/Inter-SemiBoldItalic.woff') format('woff'),
+    url('../../assets/fonts/Inter/Inter-SemiBoldItalic.ttf') format('truetype');
+  font-display: swap;
+}

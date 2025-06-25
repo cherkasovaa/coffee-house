@@ -1,0 +1,47 @@
+.offer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: flex-start;
+  justify-content: center;
+  width: 33.125rem;
+  padding-left: 0.4rem;
+
+  @media screen and (max-width: $tablet-breakpoint) {
+    gap: 2.5rem;
+    width: 97%;
+  }
+
+  &__title {
+    @include heading(
+      $primary-heading-size,
+      $color: $color-secondary,
+      $line-height: 105%
+    );
+
+    @media screen and (max-width: $tablet-breakpoint) {
+      line-height: 105%;
+    }
+
+    @media screen and (max-width: $pre-mobile-breakpoint) {
+      font-size: $primary-heading-size-m;
+      line-height: 115%;
+    }
+
+    &_accent {
+      font-style: italic;
+      line-height: 105%;
+      color: $color-accent;
+    }
+  }
+
+  &__description {
+    @include text($color: $color-secondary, $letter-spacing: 0);
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      padding-right: 0.4rem;
+    }
+  }
+}

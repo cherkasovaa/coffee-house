@@ -1,0 +1,8 @@
+.store-buttons {
+  display: flex;
+  gap: 1.25rem;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    flex-direction: column;
+  }
+}

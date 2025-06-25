@@ -1,0 +1,29 @@
+// Core files
+@import 'core/all';
+
+// Abstract files
+@import 'abstracts/all';
+
+// Components
+@import 'components/all';
+
+// Layout
+@import 'layout/all';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $primary-font;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: $regular;
+  color: $color-primary;
+  background-color: $bg-body;
+}
+
+.wrapper {
+  padding: 1.25rem 0 2.5rem;
+  overflow-x: hidden;
+}

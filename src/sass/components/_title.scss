@@ -1,0 +1,16 @@
+.title {
+  @include heading($secondary-heading-size);
+
+  @media screen and (max-width: $pre-mobile-breakpoint) {
+    font-size: $secondary-heading-size-m;
+  }
+
+  &_accent {
+    font-style: italic;
+    color: $color-accent;
+  }
+
+  &_light {
+    color: $color-secondary;
+  }
+}

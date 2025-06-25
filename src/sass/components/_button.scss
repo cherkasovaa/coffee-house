@@ -1,0 +1,159 @@
+$primary-bg-color: $bg-body;
+$button-width: 9.9rem;
+$icon-size: 2.3rem;
+
+.button {
+  &__primary {
+    @include button(1.2rem 4.875rem, $bg-color: $bg-body);
+
+    text-decoration: none;
+
+    @media (hover: hover) {
+      &:hover {
+        .button__primary-text {
+          transform: translateX(-1rem);
+
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: $tablet-breakpoint) {
+      & {
+        .button__primary-text {
+          transform: translateX(-1rem);
+
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      padding: 1.15rem 4.9rem;
+    }
+
+    &-text {
+      @include text-element;
+
+      position: relative;
+      transition: $transition;
+
+      &::after {
+        @extend %icon;
+
+        position: absolute;
+        right: -1.5rem;
+        content: url('../assets/images/svg/coffee-cup.svg');
+        opacity: 0;
+        transition: $transition;
+
+        @media screen and (max-width: $tablet-breakpoint) {
+          right: -2rem;
+        }
+      }
+    }
+  }
+
+  &__store {
+    @include button(0.75rem 1.25rem, $isflex: false);
+
+    grid-template-areas:
+      'icon available'
+      'icon store';
+    grid-template-columns: 2.25rem auto;
+    column-gap: 0.5rem;
+    width: $button-width;
+
+    &-icon {
+      grid-area: icon;
+      width: $icon-size;
+      height: $icon-size;
+      fill: $color-primary;
+    }
+
+    &-available {
+      @include text(
+        $font-size: $secondary-text-size,
+        $weight: $bold,
+        $letter-spacing: 0
+      );
+
+      grid-area: available;
+    }
+
+    &-text {
+      @include text($weight: $bold, $letter-spacing: 0);
+
+      grid-area: store;
+    }
+  }
+
+  &__load-more {
+    display: none;
+
+    @media screen and (max-width: $tablet-breakpoint) {
+      @include circle-button(
+        $hover-background: $border-dark,
+        $hover-stroke: $color-secondary
+      );
+
+      grid-column: span 2;
+      margin: 0 auto;
+    }
+
+    @media screen and (max-width: $pre-mobile-breakpoint) {
+      grid-column: auto;
+    }
+  }
+
+  &__close {
+    @include button(0.85rem 4.875rem);
+  }
+
+  &__option {
+    @include button(0.5rem 1rem 0.5rem 0.5rem);
+
+    transition: $transition;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $color-secondary;
+        background-color: $bg-container;
+        border: 1px solid $border-dark;
+
+        .button__option-icon {
+          color: $color-primary;
+          background-color: $bg-body;
+        }
+      }
+    }
+
+    &-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.875rem;
+      height: 1.875rem;
+      font-weight: $bold;
+      color: $color-primary;
+      background-color: $border-light;
+      border-radius: 50%;
+    }
+
+    &_active {
+      color: $color-secondary;
+      cursor: default;
+      background-color: $bg-container;
+      border: 1px solid $border-dark;
+
+      .button__option-icon {
+        color: $color-primary;
+        background-color: $bg-body;
+      }
+    }
+  }
+}

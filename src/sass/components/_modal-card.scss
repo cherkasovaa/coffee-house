@@ -1,0 +1,82 @@
+.modal-card {
+  display: flex;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 48rem;
+  padding: 1rem;
+  background-color: $bg-body;
+  border-radius: 2.5rem;
+
+  @media screen and (max-width: $tablet-breakpoint) {
+    max-width: 41rem;
+  }
+
+  @media screen and (max-width: $pre-mobile-breakpoint) {
+    max-width: 19rem;
+  }
+
+  &__poster {
+    flex: 0 0 19.35rem;
+    height: 19.35rem;
+    background: no-repeat center center / 110%;
+    border-radius: 2.5rem;
+
+    @media screen and (max-width: $pre-mobile-breakpoint) {
+      display: none;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    @include heading($tertiary-heading-size);
+
+    margin-bottom: 0.75rem;
+  }
+
+  &__description {
+    margin-bottom: 1.4rem;
+    line-height: 150%;
+  }
+
+  &__size-section-title,
+  &__additives-section-title {
+    margin-bottom: 0.8rem;
+  }
+
+  &__sizes,
+  &__additives {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.35rem;
+  }
+
+  &__price-section {
+    @include heading($tertiary-heading-size);
+
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.15rem;
+  }
+
+  &__alert {
+    position: relative;
+    padding: 0.75rem 0 0.75rem 1.5rem;
+    margin-bottom: 1.15rem;
+    font-size: $secondary-text-size;
+    font-weight: $bold;
+    line-height: 140%;
+    border-top: 1px solid $border-light;
+
+    &::before {
+      position: absolute;
+      top: 0.75rem;
+      left: 0;
+      content: url('./../assets/images/svg/info.svg');
+    }
+  }
+}

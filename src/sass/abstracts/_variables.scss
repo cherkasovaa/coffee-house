@@ -1,0 +1,20 @@
+// Main colors
+$color-primary: #403f3d;
+$color-secondary: #e1d4c9;
+$color-accent: #b0907a;
+
+// Background colors
+$bg-body: $color-secondary;
+$bg-container: #665f55;
+$bg-backdrop: rgba($color-primary, 0.8);
+
+// Border colors
+$border-light: #c1b6ad;
+$border-dark: $bg-container;
+
+// Breakpoints
+$desktop-breakpoint: 1024px;
+$tablet-breakpoint: 768px;
+$pre-mobile-breakpoint: 700px;
+$mobile-breakpoint: 500px;
+$transition: 0.5s;

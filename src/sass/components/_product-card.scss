@@ -1,0 +1,37 @@
+.product-card {
+  @include card-info($content: true);
+
+  display: block;
+  border: 1px solid $border-light;
+  border-radius: 2.5rem;
+
+  @media screen and (max-width: $tablet-breakpoint) {
+    max-width: 19.15rem;
+
+    &[hidden] {
+      display: none;
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover &__image {
+      transform: scale(1);
+    }
+  }
+
+  &__image-wrapper {
+    @include hover-shrink-photo(
+      $figure: square,
+      $size: 19.3rem,
+      $border-radius: 2.5rem
+    );
+  }
+
+  &__content {
+    padding: 1.25rem 1.15rem;
+
+    @media screen and (max-width: $tablet-breakpoint) {
+      padding-right: 1.2rem;
+    }
+  }
+}

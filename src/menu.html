@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu | Resource | Coffee house</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet" />
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./assets/images/favicon/site.webmanifest">
+  <!-- styles  -->
+  <link rel="stylesheet" href="./css/app.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <!-- Navigation  -->
+      <header class="header">
+        <div class="header-menu">
+          <div class="logo">
+            <a href="./index.html" class="logo__link">
+              <img src="./assets/images/logo.png" alt="logo coffee house" class="logo__img" />
+            </a>
+          </div>
+          <div class="burger-menu">
+            <span class="burger-menu__item"></span>
+            <span class="burger-menu__item"></span>
+          </div>
+          <nav class="navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a href="./index.html#favorite-coffee" class="navigation__link link">Favorite coffee</a>
+              </li>
+              <li class="navigation__item">
+                <a href="./index.html#about" class="navigation__link link">About</a>
+              </li>
+              <li class="navigation__item">
+                <a href="./index.html#mobile-app" class="navigation__link link">Mobile app</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#contacts" class="navigation__link link">Contact us</a>
+              </li>
+            </ul>
+            <div class="coffee-menu">
+              <a href="#" class="coffee-menu__link link link_active">Menu
+                <svg class="icon">
+                  <use xlink:href="./assets/images/svg/sprite.svg#coffee-cup"></use>
+                </svg>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main-menu">
+        <h1 class="main-menu__title title">
+          Behind each of our cups hides an
+          <span class="title_accent">amazing surprise</span>
+        </h1>
+
+        <div class="tabs">
+          <div class="tabs__item tabs__item_active tab" aria-label="coffee">
+            <span class="tab__icon">☕</span>
+            <span class="tab__text">Coffee</span>
+          </div>
+          <div class="tabs__item tab" aria-label="tea">
+            <span class="tab__icon">🫖</span>
+            <span class="tab__text">Tea</span>
+          </div>
+          <div class="tabs__item tab" aria-label="dessert">
+            <span class="tab__icon">🍰</span>
+            <span class="tab__text">Dessert</span>
+          </div>
+        </div>
+
+        <!-- Gallery of products  -->
+        <div class="products-area">
+          <div class="products" aria-label="coffee"></div>
+
+          <div class="button button__load-more">
+            <svg class="icon">
+              <use xlink:href="./assets/images/svg/sprite.svg#refresh"></use>
+            </svg>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer  -->
+
+      <footer class="footer" id="contacts">
+        <div class="footer__social-media">
+          <h2 class="title title_light">
+            Sip, Savor, Smile.
+            <span class="title_accent">It's coffee time!</span>
+          </h2>
+          <ul class="socials">
+            <li class="socials__item">
+              <a href="https://twitter.com/" class="socials__link" aria-hidden="true">
+                <svg class="icon">
+                  <use xlink:href="./assets/images/svg/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="https://www.instagram.com/" class="socials__link" aria-hidden="true">
+                <svg class="icon">
+                  <use xlink:href="./assets/images/svg/sprite.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="https://www.facebook.com/" class="socials__link" aria-hidden="true">
+                <svg class="icon">
+                  <use xlink:href="./assets/images/svg/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__contacts contacts-info">
+          <h3 class="contacts-info__title">Contact us</h3>
+
+          <ul class="contacts">
+            <li class="contacts__item">
+              <a class="contacts__link contacts__link_pin-alt" href="https://maps.app.goo.gl/FsGjUaxWCqXiYR1q7"
+                target="_blank">8558 Green Rd., LA</a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__link contacts__link_phone" href="tel:+16035550123">+1 (603) 555-0123</a>
+            </li>
+            <li class="contacts__item contacts__item_clock">
+              Mon-Sat: 9:00 AM - 23:00 PM
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script type="module" src="./js/index.js"></script>
+</body>
+
+</html>

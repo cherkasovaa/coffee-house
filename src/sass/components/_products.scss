@@ -1,0 +1,14 @@
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 19.3rem);
+  gap: 2.5rem;
+  justify-content: center;
+  width: 100%;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    gap: 2.45rem;
+    justify-items: center;
+  }
+}

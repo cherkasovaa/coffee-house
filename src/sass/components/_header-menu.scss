@@ -1,0 +1,15 @@
+.header-menu {
+  display: grid;
+  grid-template-areas: 'logo navigation';
+  grid-template-columns: 6.25rem 1fr;
+  align-items: center;
+  justify-content: space-between;
+  height: 3.75rem;
+
+  @media screen and (max-width: $tablet-breakpoint) {
+    grid-template-areas:
+      'logo burger'
+      'navigation navigation';
+    grid-template-rows: 3.75rem auto;
+  }
+}
